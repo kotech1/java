@@ -1,22 +1,12 @@
 // Type2.java
 public class Type2 {
     public static void main(String[] args) {
-        short a, b, c;
-        a = 8234;
-        b = 324;
-        c = (short)(a*b);
-        System.out.println("c = "+c);
-        a = 32767;
-        b = 1;
-        c = (short)(a+b);
-        System.out.println("c = "+c);
-
-        int e, f, g;
-        e = 483029843;
-        f = -323409345;
-        g = e*f;
-        System.out.println("g = "+g);
-        
+        //int 3count;        // ❌ 숫자로 시작
+        //int class;         // ❌ 예약어
+        //int _;             // ❌ Java 9+ 금지
+        int café, cafe카페;   // ✅ 문법은 OK (권장 X: 인코딩 이슈)
+        int camelCase;
+        int not_camel_case;
     }
 }
 
