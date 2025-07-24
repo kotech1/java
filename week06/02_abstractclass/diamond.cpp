@@ -1,23 +1,35 @@
+// g++ diamond.cpp
 #include <iostream>
+
 class A {
 public:
-    void hello() { std::cout << "A\n"; }
+    int a;
+    A(int a) : a(a) {}
+    void hello() { std::cout << a << "\n"; }
 };
 
-class B : public A {};
-class C : public A {};
-class D : public B, public C {};
+class B : public A {
+public:
+    B() : A(1) {}
+};
+
+class C : public A {
+public:
+    C() : A(2) {}
+};
+
+class D : public B, public C {
+public:
+    D() = default;
+};
 
 int main() {
     D d;
 
-    // 1) 경로 한정(qualified) 호출
-    d.B::hello();        // 또는 d.B::A::hello();
-    d.C::hello();        // 또는 d.C::A::hello();
-
-    // 2) 캐스팅으로 경로를 고정
-    static_cast<B&>(d).hello();
-    static_cast<C&>(d).hello();
+    // 경로 한정(qualified) 호출로 모호성 해소
+    d.B::hello();  // 또는 d.B::A::hello();
+    d.C::hello();  // 또는 d.C::A::hello();
+    d.hello();
 
     return 0;
 }
