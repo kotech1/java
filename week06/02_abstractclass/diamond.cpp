@@ -4,7 +4,7 @@
 class A {
 public:
     int a;
-    A(int a) : a(a) {}
+    A(int a) {this->a = a;}
     void hello() { std::cout << a << "\n"; }
 };
 
@@ -29,7 +29,7 @@ int main() {
     // 경로 한정(qualified) 호출로 모호성 해소
     d.B::hello();  // 또는 d.B::A::hello();
     d.C::hello();  // 또는 d.C::A::hello();
-    d.hello();
+    //d.hello(); // error
 
     return 0;
 }
