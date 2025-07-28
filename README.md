@@ -13,3 +13,9 @@ https://git-scm.com/downloads/win
 # openjdk temurin 버전
 
 https://adoptium.net/temurin/releases
+
+# 파워쉘 관련 보안오류 수정
+```
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned -Force
+```
+
