@@ -52,15 +52,3 @@ public class SmartRobot extends Machine implements Speakable, Movable {
     }
 }
 
-
-public class Person {
-    private String name;         
-    private String birthDate;    
-    // setter 메소드
-    public void setInfo(String name, String birthDate) {
-        this.name = name;
-        this.birthDate = birthDate;
-    }
-}
-Person p = new Person();
-p.setInfo("난 니꺼♥️", "4141-13-32");
