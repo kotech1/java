@@ -29,7 +29,7 @@ int main() {
     // 경로 한정(qualified) 호출로 모호성 해소
     d.B::hello();  // 또는 d.B::A::hello();
     d.C::hello();  // 또는 d.C::A::hello();
-    //d.hello(); // error
+    //d.hello(); // 오류: 다이아몬드 문제
 
     return 0;
 }

@@ -12,16 +12,17 @@ class Dog3 extends Animal3 {
         super(name);
         System.out.println("Dog3 "+name);
     }
-    @Override
-    void sound() {
-        super.sound();
-        System.out.println("Bark");
+    @Override void sound() {
+        //super.sound();
+        System.out.println("멍멍");
     }
 }
 
 public class InheritanceExample3 {
     public static void main(String[] args) {
-        Dog3 dog = new Dog3("Jjong");
-        dog.sound(); 
+        Dog3 dog = new Dog3("바둑이");
+        dog.sound();  
     }
 }
+
+
