@@ -1,6 +1,6 @@
 // ObjectOriendted.java
 
-class ObjectOriendted {
+public class ObjectOriented {
     public static void main(String[] args) {
         Animal a = new Dog();
         a.makeSound(); // Bark!
