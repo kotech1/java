@@ -7,7 +7,7 @@ public class Op2 {
         b = (1.0 + 2.0 == 3.0); // true
         b = (0.1 + 0.2 == 0.3); // false
         System.out.println(b);
-        
+
         double eps = 1e-6;
         b = (0.1 + 0.2 < 0.3+eps && 
              0.1 + 0.2 > 0.3-eps); // true

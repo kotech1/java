@@ -9,8 +9,6 @@ public class Str {
 
         System.out.println(1 + 2 + "3"); // "33"
         System.out.println("1" + 2 + 3); // "123"
-        if (3)
-            System.out.println("true"); // "true"
     }
 }
 
