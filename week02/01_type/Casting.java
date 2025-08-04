@@ -12,7 +12,7 @@ public class Casting {
         double d = 1e308;
         float e;
         e = (float)d;
-        System.out.println(e); 
+        System.out.println(e); // Infinity
         int f;
         f = (int)d;
         System.out.println(f); 

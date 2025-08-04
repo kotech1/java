@@ -1,5 +1,5 @@
-// Op4.java
-public class Op4 {
+// Op5.java
+public class Op5 {
     public static void main(String[] args) {
         int a = 3, b = 0, c = 7;
 
