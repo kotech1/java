@@ -5,9 +5,12 @@ public class Scope {
         a = 1;
         {
             //int a = 3; //error
-            int b;
+            int b = 0;
+            System.out.println(a); // OK
+            System.out.println(b); // OK
         }
-        //System.out.println(b); //error
+        System.out.println(a); // OK
+        //System.out.println(b); // error
     }
 }
 
