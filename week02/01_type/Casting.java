@@ -16,6 +16,7 @@ public class Casting {
         int f;
         f = (int)d;
         System.out.println(f); 
+        System.out.printf("0x%04x\n", f); 
 
         short g = (short)3e100;
         System.out.println(g); 
