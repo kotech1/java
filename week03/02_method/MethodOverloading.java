@@ -34,13 +34,14 @@ class MethodOverloading {
 
     public static void main(String[] args) 
     {
-        float b = abs(-3.0);
+        float b = (float)Math.abs(-3.0);
+        System.out.println(b);
         //double c = min(1, 3); // 1
+        //System.out.println(c);
         //double d = min(1.0, 3.0); // 1.0
-        System.out.println(c);
 
-        double d = min(1, 3);
-        System.out.println(d);
+        //double d = min(1, 3);
+        //System.out.println(d);
     }
 }
 

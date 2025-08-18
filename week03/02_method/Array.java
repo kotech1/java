@@ -6,11 +6,17 @@ class Array {
 
         int[] b;
         b = new int[10];
+        a[0] = b[0];
+        b[1] = a[0];
 
         int[] c = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+        System.out.println(c);
+        System.out.println(c[3]);
         String[] weekend = {
             "토요일", "일요일"
         };
+        System.out.println(weekend);
+        System.out.println(weekend[0]);
     }
     {
         int[] a = {1};
