@@ -2,7 +2,7 @@
 class Method2 {
     public static void main(String[] args) {
         int a;
-        a = Functions2.factorial(3);
+        a = Functions2.factorial(30000);
         System.out.println(a);
     }
 }

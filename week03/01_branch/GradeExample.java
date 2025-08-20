@@ -30,11 +30,11 @@ public class GradeExample {
             sGrade = "B";
         else if (score >= 70)           
             sGrade = "C";
-        else if (score >= 60)           
+        else if (score >= 60) {
             sGrade = "D";
             if (score >= 65)            // maybe a bug
                 sGrade = "D+";
-        else                            
+        } else                            
             sGrade = "F";
 
         System.out.printf("점수: %d → 학점: %s%n", score, sGrade);

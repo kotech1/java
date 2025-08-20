@@ -22,6 +22,8 @@ class Array {
         int[] a = {1};
         int[] b = a; // copy of reference
         a[0] = 99;
+        System.out.println(a);
+        System.out.println(b);
         System.out.println(b[0]); // 99
     }
     {

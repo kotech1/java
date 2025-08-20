@@ -9,9 +9,9 @@ class Method {
 
 class Functions {
     static int factorial(int n) {
-        int sum = 1;
+        int prod = 1;
         for (int i = 1; i <= n; i++)
-            sum *= i;
-        return sum;
+            prod *= i;
+        return prod;
     }
 }
