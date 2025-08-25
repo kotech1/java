@@ -1,10 +1,12 @@
 // CallByRef.java
 
-class CallByRef {
+public class CallByRef {
     static void setInt(int a, int b) {
         a = b;
     }
     static void setId(Club a, int b) {
+        // 다음 줄에 따라 결과가 달라짐.
+        // a = new Club();
         a.id = b;
     }
     static void setArray0(int[] a, int b) {

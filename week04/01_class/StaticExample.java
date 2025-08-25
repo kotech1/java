@@ -8,6 +8,7 @@ public class StaticExample {
         a.id++;
         System.out.println(Club3.id);
         a.setValues(9, 99);
+        System.out.println(Club3.id);
     }
 }
 
@@ -19,7 +20,9 @@ class Club3 extends Object {
         // this.id = id; // compile error
     }
     public void setValues(int id, int nMembers) {
-        this.id = id;
+        // this.id = id;  // OK
+        id = id;
+        // Club3.id = id; // 가독성(정적변수 명시)
         this.nMembers = nMembers;
     }
 }
