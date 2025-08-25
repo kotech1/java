@@ -33,19 +33,15 @@ class School {
 
     public static void main(String[] args) {
         Student[] students = new Student[100];
-
         for (int i = 0; i < students.length; i++) {
             students[i] = new Student();
         }
-
         students[0].name = "홍길동";
         students[0].grade = 2;
         students[0].classNo = 3;
-
         students[9].name = "김영희";
         students[9].grade = 2;
         students[9].classNo = 3;
-
         School s = new School(students);
 
         Student[] arrStudents = s.getStudents(2, 3);
@@ -64,7 +60,7 @@ class Person {
 
 class Student extends Person {
     int grade;
-    int classNo; // class 명칭 사용불가
+    int classNo; // class 사용불가
 }
 
 class Teacher extends Person {
