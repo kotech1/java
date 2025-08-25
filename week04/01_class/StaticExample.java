@@ -5,7 +5,8 @@ public class StaticExample {
         System.out.println(Club3.id);
         Club3.id++;
         Club3 a = new Club3();
-        a.id++;
+        //a.id++;     // OK 
+        Club3.id++;   //가독성
         System.out.println(Club3.id);
         a.setValues(9, 99);
         System.out.println(Club3.id);
@@ -21,8 +22,7 @@ class Club3 extends Object {
     }
     public void setValues(int id, int nMembers) {
         // this.id = id;  // OK
-        id = id;
-        // Club3.id = id; // 가독성(정적변수 명시)
+        Club3.id = id; // 가독성(정적변수 명시)
         this.nMembers = nMembers;
     }
 }
