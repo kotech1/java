@@ -4,14 +4,17 @@ class BankAccount {
     public BankAccount(int initialBalance) {
         this.balance = initialBalance;
     }
+
     public int getBalance() {   // 읽기만 허용
         return balance;
     }
+
     public void deposit(int amount) {
         if (amount > 0) {
             balance += amount;  // 제어된 방식으로 변경
         }
     }
+
     public void withdraw(int amount) { // 일관성 검증
         if (amount > 0 && amount <= balance) {
             balance -= amount;

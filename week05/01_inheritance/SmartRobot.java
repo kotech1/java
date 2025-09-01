@@ -42,8 +42,8 @@ public class SmartRobot extends Machine implements Speakable, Movable {
     void operate() {
         battery.supplyPower(); // has-a 사용
         start();               // is-a 사용
-        speak("안녕하세요!");     // can-do 사용
-        move(10);              // can-do 사용
+        speak("안녕하세요!"); // can-do 사용
+        move(10);     // can-do 사용
     }
 
     public static void main(String[] args) {
