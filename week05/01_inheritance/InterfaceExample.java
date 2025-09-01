@@ -1,4 +1,4 @@
-// Interface1.java
+// InterfaceExample.java
 
 interface Animal5 {
     void eat();
@@ -20,7 +20,7 @@ class Dog5 implements Mammal5 {
     }
 }
 
-public class Interface1 {
+public class InterfaceExample {
     public static void main(String[] args) {
         Dog5 dog = new Dog5();
         dog.eat();   // Dog eats

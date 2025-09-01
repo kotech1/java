@@ -25,14 +25,14 @@ class SmartPhone implements Camera, MusicPlayer, GPS {
 
     @Override
     public void navigate(String destination) {
-        System.out.println(destination + "로 길 안내를 시작합니다.");
+        System.out.println(destination + "으로 길 안내를 시작합니다.");
     }
 }
 public class MultipleInheritance1 {
     public static void main(String[] args) {
         SmartPhone phone = new SmartPhone();
-        phone.takePhoto();               // 📸 사진 기능
-        phone.playMusic();               // 🎵 음악 기능
-        phone.navigate("서울역");        // 🗺️ GPS 기능
+        phone.takePhoto();               // 사진 기능
+        phone.playMusic();               // 음악 기능
+        phone.navigate("서울역");        // GPS 기능
     }
 }
