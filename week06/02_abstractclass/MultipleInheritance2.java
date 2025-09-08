@@ -1,9 +1,13 @@
 interface B2 {
-    default void hello() { System.out.println("B.hello"); }
+    default void hello() {
+        System.out.println("B.hello");
+    }
 }
 
 interface C2 {
-    default void hello() { System.out.println("C.hello"); }
+    default void hello() {
+        System.out.println("C.hello");
+    }
 }
 
 // A와 B 모두 hello()를 제공하므로 충돌 → 반드시 재정의 필요
