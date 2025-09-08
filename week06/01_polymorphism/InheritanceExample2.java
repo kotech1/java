@@ -75,7 +75,7 @@ public class InheritanceExample2 {
 
         Animal2 newAnimal = new Animal2();
         newAnimal.sound();          // Animal sound
-        //Dog2 newDog = (Dog2)newAnimal; // 컴파일 오류
+        //Dog2 newDog = (Dog2)newAnimal; // 런타임 오류
         playDogSound(oldDog);       // Bark
         playDogSound(animal);       // Bark
         //playDogSound(newAnimal);  // 런타임 오류
