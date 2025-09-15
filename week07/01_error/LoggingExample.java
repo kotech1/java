@@ -13,21 +13,3 @@ public class LoggingExample {
     }
 }
 
-
-/*
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Service;
-
-@Service
-public class MyService {
-
-    private static final Logger logger = LoggerFactory.getLogger(MyService.class);
-
-    public void doSomething() {
-        logger.info("정보 로그 출력");
-        logger.debug("디버그 로그 출력");
-        logger.error("오류 로그 출력");
-    }
-}
-*/
