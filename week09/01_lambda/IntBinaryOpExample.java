@@ -1,5 +1,10 @@
-//
 import java.util.function.IntBinaryOperator;
+/*
+@FunctionalInterface
+public interface IntBinaryOperator {
+    int applyAsInt(int left, int right);
+}
+*/
 
 public class IntBinaryOpExample {
     public static void main(String[] args) {
@@ -9,11 +14,5 @@ public class IntBinaryOpExample {
     }
 }
 
-/*
-@FunctionalInterface
-public interface IntBinaryOperator {
-    int applyAsInt(int left, int right);
-}
-*/
 
 

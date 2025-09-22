@@ -1,4 +1,8 @@
 // GenericsExample1.java
+interface MyBinaryOperator<T> {
+    T apply(T t1, T t2);
+}
+
 public class GenericsExample1 {
     public static void main(String[] args) {
         MyBinaryOperator<Integer> iSum = (a, b) -> a + b;
@@ -11,6 +15,3 @@ public class GenericsExample1 {
     }
 }
 
-interface MyBinaryOperator<T> {
-    T apply(T t1, T t2);
-}

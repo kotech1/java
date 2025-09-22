@@ -1,5 +1,10 @@
-//
 import java.util.function.LongBinaryOperator;
+/*
+@FunctionalInterface
+public interface LongBinaryOperator {
+    long applyAsLong(long left, long right);
+}
+*/
 
 public class LongBinaryOpExample {
     public static void main(String[] args) {
@@ -8,12 +13,4 @@ public class LongBinaryOpExample {
         System.out.println(op.applyAsLong(3L, 7L)); // 21
     }
 }
-
-/*
-@FunctionalInterface
-public interface IntBinaryOperator {
-    int applyAsInt(int left, int right);
-}
-*/
-
 
