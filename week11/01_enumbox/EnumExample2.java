@@ -17,7 +17,7 @@ enum MyDay {
 
 public class EnumExample2 {
     public static void main(String[] args) {
-        System.out.println(MyDay.MON.name());   // "MON" (고정, 변경 불가)
+        System.out.println(MyDay.MON.name());   // "MON" 
         System.out.println(MyDay.MON.getLabel()); // "월요일" (사용자가 정의한 문자열)
 
         int day = 2;    // ordinal로 enum객체 얻기
