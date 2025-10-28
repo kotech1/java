@@ -31,5 +31,7 @@ public class ListExample2 {
             + l.contains(new User(1001, "홍길동"))); 
         l.remove(new User(1001, "홍길동"));
         l.forEach((u) -> System.out.println(u.name));
+        //User a = l.get(0);
+        //System.out.println(a.hashCode());
     }
 }
