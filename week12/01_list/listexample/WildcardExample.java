@@ -11,16 +11,33 @@ public class WildcardExample {
         return sum;
     }
 
+    // producer extends consumer super
+    // 값을 꺼낼 때 extends 사용 -> 값을 내 보내므로 생산(producer)
     static double sumNum(List<? extends Number> l) {
         double sum = 0.0;
-        for (Number n : l) 
+        //Number x = l.get(0);
+        //System.out.println(x.getClass());
+        for (Number n : l) {
             sum += n.doubleValue();
+        } 
         return sum;
     }
 
-    // 제네릭 메소드
+    // 저장 할 때 super 사용 -> 객체가 값을 소모(comsumer)
     public static <T> void add(T n, List<? super T> l) {
-        l.add(n); // 저장 시 업 캐스팅 가능 Number n = 3;
+        System.out.println(n.getClass()); // 직접 T의 타입을 확인
+        // C
+        l.add(n); // 저장 시 업 캐스팅 가능 예:Number n = 3;
+        // U
+        //l.set(0, n);
+        // D
+        //l.remove(0);
+        // R
+        //Number x = l.get(0); // 컴파일 오류
+
+        //Object o = l.get(0);
+        //Number m = (Number)o;
+        //System.out.println(m.getClass());
     }
 
     public static void main(String[] args) {
@@ -32,6 +49,7 @@ public class WildcardExample {
         add(5, l3);   // WildcardExample.<Integer>add(...)
         add(3.1, l3); // WildcardExample.<Double>add(...)
         System.out.println(l3); // [5, 3.1]
+        System.out.println(sumNum(l3));
         // 런타임 오류
         //List<String> l4 = Arrays.asList("abc");
         //System.out.println(sum(l4));
