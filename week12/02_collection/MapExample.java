@@ -26,7 +26,14 @@ public class MapExample {
         for (Map.Entry<Integer, String> entry : map.entrySet()) {
             System.out.println(entry.getKey() + " = " + entry.getValue());
         }
+
+        // Quiz
         map.forEach((i, day) -> System.out.println(i + day));
-        map.forEach((Number i, String day) -> System.out.println(i + day));
+        //map.forEach((Number i, String day) -> System.out.println(i + day));
+        /*
+        map.forEach((i, day) -> {
+            System.out.println(i + day);
+        });
+        */
     }
 }
