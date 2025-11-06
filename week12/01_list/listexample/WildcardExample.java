@@ -23,7 +23,7 @@ public class WildcardExample {
         return sum;
     }
 
-    // 저장 할 때 super 사용 -> 객체가 값을 소모(comsumer)
+    // 저장 할 때 super 사용 -> 객체가 값을 소모(consumer)
     public static <T> void add(T n, List<? super T> l) {
         System.out.println(n.getClass()); // 직접 T의 타입을 확인
         // C
