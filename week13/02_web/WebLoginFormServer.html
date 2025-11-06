@@ -1,0 +1,49 @@
+  <div id="app"></div>
+  <script>
+    async function checkProfile() {
+      const res = await fetch('/profile', {credentials: 'include'});
+      const app = document.getElementById('app');
+      if (res.ok) {
+        const data = await res.json();
+        app.innerHTML = 
+          '<p>안녕하세요, ' + data.user + ' 님</p>' +
+          '<button onclick="logout()">Logout</button>';
+      } else {
+        app.innerHTML = `
+          <form onsubmit="return login(event)">
+            <label>Username: <input type="text" id="username"></label><br>
+            <label>Password: <input type="password" id="password"></label><br>
+            <button type="submit">Login</button>
+          </form>
+        `;
+      }
+    }
+
+    async function login(event) {
+      event.preventDefault();
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      const res = await fetch('/login', {
+        method: 'POST',
+        headers: {'Content-Type':'application/x-www-form-urlencoded'},
+        body: 'username=' + encodeURIComponent(username) + '&password=' + encodeURIComponent(password),
+        credentials: 'include'
+      });
+
+      const data = await res.json();
+      alert(data.message);
+      await checkProfile();
+      return false;
+    }
+
+    async function logout() {
+      await fetch('/logout', {
+        method: 'POST',
+        credentials: 'include'
+      });
+      await checkProfile();
+    }
+
+    checkProfile();
+  </script>
